@@ -1045,4 +1045,19 @@ For budget estimates: add up relevant "from" prices, show a clear itemised range
 </script>
 
 
+<script>
+/* Browsers block autoplay on unmuted video; the runtime drops the muted attribute during render, so re-apply it. */
+(function(){
+  function fix(){
+    document.querySelectorAll('video[autoplay]').forEach(function(v){
+      if(!v.muted){ v.muted=true; v.defaultMuted=true; v.setAttribute('muted',''); }
+      v.playsInline=true; v.setAttribute('playsinline','');
+      var p=v.play(); if(p&&p.catch){p.catch(function(){});}
+    });
+  }
+  if(document.readyState!=='loading') fix(); else document.addEventListener('DOMContentLoaded',fix);
+  window.addEventListener('load',fix);
+  var n=0,id=setInterval(function(){fix(); if(++n>12) clearInterval(id);},500);
+})();
+</script>
 </body></html>

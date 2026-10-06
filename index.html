@@ -1961,10 +1961,12 @@ For budget estimates: add up relevant "from" prices, show a clear itemised range
 <script>
 (() => {
   let activeDialog = null, previousFocus = null;
+  const wiredMenus = new WeakSet();
   const wire = () => {
+    if (!document.getElementById("dc-root")) return;
     document.querySelectorAll('.rd-mobile-menu').forEach(menu => {
-      if (menu.dataset.ready) return;
-      menu.dataset.ready = '1';
+      if (wiredMenus.has(menu)) return;
+      wiredMenus.add(menu);
       menu.addEventListener('click', e => { if (e.target.closest('a')) menu.open = false; });
       menu.addEventListener('keydown', e => { if(e.key === 'Escape') { menu.open=false; menu.querySelector('summary').focus(); } });
     });

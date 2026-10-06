@@ -1,10 +1,7 @@
 # ravish.digital
 
-Static site for Ravish Digital Studio.
+Static site for Ravish Digital Studio, deployed on Vercel with DNS at Cloudflare.
 
-- `index.html` — the page (~86 KB)
-- content-hashed assets at the repo root — images, fonts, video and JS, served as individual files
-- `rdslogo.png` — 1200×630 social preview card (stable URL, referenced by `og:image` / `twitter:image`)
-- `vercel.json` — long-lived immutable caching for the hashed assets, 1-day revalidating cache for the social card, no-cache for the HTML
+The source preserves the live September–October design and all four interactive portfolio cases. `index.html` uses local, separately served JavaScript, font and image files; `assets/w/` contains the 22 portfolio photographs. The Instagram contact, structured metadata and assistant use `@ravish.digital`.
 
-Deployed on Vercel. DNS at Cloudflare.
+The homepage requests no storage at the browser or CDN so a deployment can replace stale content. Content-hashed assets retain immutable caching; the social preview is served at `assets/rds-logo.png`.

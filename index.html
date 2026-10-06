@@ -813,7 +813,7 @@
   --rd-gutter: clamp(24px, 5.2vw, 88px);
   --rd-width: 1320px;
 }
-html { scroll-padding-top: 98px; }
+html { scroll-padding-top: 0; }
 body { background: var(--rd-paper) !important; color: var(--rd-text) !important; font-weight: 400; }
 ::selection { background: var(--rd-brass-light); color: var(--rd-ink); }
 .rd-grain { opacity: .025 !important; }
@@ -884,7 +884,7 @@ section[aria-label="Capabilities"] span { color: var(--rd-brass-light) !importan
 .rd-offer-grid { max-width: var(--rd-width) !important; grid-template-columns: 1.5fr 1fr !important; align-items: center !important; gap: 70px !important; }
 #offer h2 { font-size: clamp(54px, 6.5vw, 92px) !important; }
 #offer a { background: var(--rd-ink) !important; color: var(--rd-paper) !important; font-size: 11px !important; letter-spacing: 2px !important; padding: 18px 28px !important; }
-#offer [style*="background-clip:text"] { background: none !important; color: var(--rd-brass) !important; -webkit-text-fill-color: var(--rd-brass) !important; }
+#offer [style*="background-clip: text"] { background: none !important; color: var(--rd-brass) !important; -webkit-text-fill-color: var(--rd-brass) !important; }
 .rd-offer-badge { width: clamp(250px, 26vw, 350px) !important; height: clamp(250px, 26vw, 350px) !important; border-radius: 0 !important; background: transparent !important; border: 1px solid var(--rd-brass) !important; box-shadow: none !important; animation: none !important; }
 .rd-offer-badge::after { content: ''; position: absolute; inset: 12px; border: 1px solid var(--rd-line); pointer-events: none; }
 .rd-offer-decoration { display: none !important; }
@@ -895,11 +895,11 @@ section[aria-label="Capabilities"] span { color: var(--rd-brass-light) !importan
 .rd-tier-grid > div { border-right: 1px solid var(--rd-line); }
 .rd-tier-grid > div:last-child { border-right: 0; }
 .rd-tier-grid .rd-card { background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; padding: 38px clamp(24px, 3vw, 44px) !important; transform: none !important; }
-.rd-tier-grid .rd-card > div[style*="position:absolute"], .rd-tier-grid .rd-card > img { display: none !important; }
+.rd-tier-grid .rd-card > div[style*="position: absolute"], .rd-tier-grid .rd-card > img { display: none !important; }
 .rd-card > div[style*="translateZ"] { transform: none !important; }
 .rd-tier-grid .rd-card h3 { font-size: 46px !important; margin: 18px 0 9px !important; color: var(--rd-text) !important; }
-.rd-tier-grid .rd-card [style*="font-size:40px"] { font-size: 57px !important; font-weight: 400 !important; }
-.rd-tier-grid .rd-card [style*="border-radius:999px"] { border-radius: 0 !important; background: var(--rd-ink) !important; color: var(--rd-paper) !important; font-size: 9px !important; box-shadow: none !important; padding: 7px 12px !important; }
+.rd-tier-grid .rd-card [style*="font-size: 40px"] { font-size: 57px !important; font-weight: 400 !important; }
+.rd-tier-grid .rd-card [style*="border-radius: 999px"] { border-radius: 0 !important; background: var(--rd-ink) !important; color: var(--rd-paper) !important; font-size: 9px !important; box-shadow: none !important; padding: 7px 12px !important; }
 .rd-tier-grid .rd-card p { min-height: 88px !important; font-size: 15px !important; line-height: 1.8 !important; }
 .rd-tier-grid .rd-card li { font-size: 14px !important; line-height: 1.55 !important; }
 .rd-tier-grid .rd-card a { background: transparent !important; color: var(--rd-text) !important; border-color: var(--rd-brass) !important; font-size: 10px !important; letter-spacing: 2px !important; padding: 18px !important; }
@@ -915,7 +915,7 @@ section[aria-label="Capabilities"] span { color: var(--rd-brass-light) !importan
 /* Selected work retains its dynamic gallery, opacity and active-tab states. */
 #work h2, #work h3 { color: var(--rd-paper) !important; }
 #work > div:first-child { background: var(--rd-ink) !important; }
-#work > div[style*="max-width:1280px"] { max-width: var(--rd-width) !important; }
+#work > div[style*="max-width: 1280px"] { max-width: var(--rd-width) !important; }
 #work h2 { max-width: 820px; font-size: clamp(44px, 6vw, 84px) !important; }
 #work [data-px="mark"] { opacity: .035 !important; }
 .rd-work-tabs { padding: 12px 0 !important; gap: 0 !important; border-color: var(--rd-line-dark) !important; }
